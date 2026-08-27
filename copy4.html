@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opção 4 — Direta & em Tópicos (Leitura Rápida para o Recrutador) - Thiago Barbosa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; min-height: 100vh; padding: 30px 15px; }
+    .container { max-width: 780px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .badge-top { display: inline-block; background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+    h1 { font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+    .strategy { font-size: 13px; color: #94a3b8; line-height: 1.5; background: #1e293b; border-left: 4px solid #38bdf8; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 25px; }
+    
+    .nav-bar { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
+    .nav-link { padding: 6px 14px; background: #1e293b; color: #cbd5e1; border: 1px solid #334155; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 600; transition: all 0.2s; }
+    .nav-link.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .nav-link:hover { border-color: #38bdf8; }
+
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 25px; }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #334155; padding-bottom: 12px; }
+    .card-title { font-size: 14px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .copy-box { background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 18px; font-family: system-ui, sans-serif; font-size: 14px; line-height: 1.65; color: #e2e8f0; white-space: pre-wrap; word-break: break-word; }
+    
+    .btn-row { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: 0.2s; }
+    .btn-copy { background: #2563eb; color: #fff; }
+    .btn-copy:hover { background: #1d4ed8; }
+    .btn-cv { background: #334155; color: #f8fafc; }
+    .btn-cv:hover { background: #475569; }
+    .btn-wa { background: #16a34a; color: #fff; }
+    .btn-wa:hover { background: #15803d; }
+    
+    .status-msg { margin-top: 10px; font-size: 12px; color: #4ade80; display: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="header">
+      <div class="badge-top">Vaga: Assistente de E-commerce & Operações (Casa Decor)</div>
+      <h1>Opção 4 — Direta & em Tópicos (Leitura Rápida para o Recrutador)</h1>
+      <div class="strategy"><strong>Estratégia desta versão:</strong> Formato dinâmico em bullet points para leitura instantânea no celular, incluindo o link do ExPlan de forma destacada.</div>
+    </div>
+
+    <!-- NAVEGACAO ENTRE AS 5 COPYS -->
+    <div class="nav-bar">
+      <a href="copy1.html" class="nav-link ">Opção 1</a><a href="copy2.html" class="nav-link ">Opção 2</a><a href="copy3.html" class="nav-link ">Opção 3</a><a href="copy4.html" class="nav-link active">Opção 4</a><a href="copy5.html" class="nav-link ">Opção 5</a>
+      <a href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" class="nav-link" style="background:#0f766e; border-color:#0f766e; color:#fff;">📄 Ver Currículo</a>
+    </div>
+
+    <!-- CARD DA COPY -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Texto Formatado para WhatsApp (62 99696-0056)</div>
+        <span style="font-size: 11px; color: #64748b;">Pronto para envio</span>
+      </div>
+
+      <div class="copy-box" id="copyText">Olá, bom dia! Segue meu currículo em anexo para a vaga de *Assistente de E-commerce e Operações*.
+
+Resumo das minhas qualificações para a função:
+• *Estoque & Expedição:* Experiência prática em inventário, picking/packing e despacho cuidadoso;
+• *Atendimento & SAC:* Suporte e pós-venda via WhatsApp com foco em cordialidade e resolução rápida;
+• *Informática & Sistemas:* Domínio de cadastro de produtos, edição de fotos e automação;
+• *Projeto de Destaque:* Desenvolvi a aplicação *ExPlan* (automação e cálculo de orçamentos): https://thiagonascimentobarbosapro.com
+
+Fico à disposição para uma entrevista presencial em Goiânia!</div>
+
+      <div class="btn-row">
+        <button class="btn btn-copy" onclick="copyToClipboard()">📋 Copiar Mensagem</button>
+        <a href="https://wa.me/5562996960056?text=Ol%C3%A1%2C%20bom%20dia!%20Segue%20meu%20curr%C3%ADculo%20em%20anexo%20para%20a%20vaga%20de%20*Assistente%20de%20E-commerce%20e%20Opera%C3%A7%C3%B5es*.%0A%0AResumo%20das%20minhas%20qualifica%C3%A7%C3%B5es%20para%20a%20fun%C3%A7%C3%A3o%3A%0A%E2%80%A2%20*Estoque%20%26%20Expedi%C3%A7%C3%A3o%3A*%20Experi%C3%AAncia%20pr%C3%A1tica%20em%20invent%C3%A1rio%2C%20picking%2Fpacking%20e%20despacho%20cuidadoso%3B%0A%E2%80%A2%20*Atendimento%20%26%20SAC%3A*%20Suporte%20e%20p%C3%B3s-venda%20via%20WhatsApp%20com%20foco%20em%20cordialidade%20e%20resolu%C3%A7%C3%A3o%20r%C3%A1pida%3B%0A%E2%80%A2%20*Inform%C3%A1tica%20%26%20Sistemas%3A*%20Dom%C3%ADnio%20de%20cadastro%20de%20produtos%2C%20edi%C3%A7%C3%A3o%20de%20fotos%20e%20automa%C3%A7%C3%A3o%3B%0A%E2%80%A2%20*Projeto%20de%20Destaque%3A*%20Desenvolvi%20a%20aplica%C3%A7%C3%A3o%20*ExPlan*%20(automa%C3%A7%C3%A3o%20e%20c%C3%A1lculo%20de%20or%C3%A7amentos)%3A%20https%3A%2F%2Fthiagonascimentobarbosapro.com%0A%0AFico%20%C3%A0%20disposi%C3%A7%C3%A3o%20para%20uma%20entrevista%20presencial%20em%20Goi%C3%A2nia!" target="_blank" class="btn btn-wa">💬 Abrir no WhatsApp</a>
+        <a href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" target="_blank" class="btn btn-cv">📄 Abrir Currículo (PDF)</a>
+      </div>
+      <div id="statusMsg" class="status-msg">✅ Mensagem copiada com sucesso para a área de transferência!</div>
+    </div>
+
+  </div>
+
+  <script>
+    function copyToClipboard() {
+      const text = document.getElementById('copyText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const msg = document.getElementById('statusMsg');
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 3500);
+      });
+    }
+  </script>
+
+</body>
+</html>
