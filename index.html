@@ -16,7 +16,7 @@
     p.subtitle { font-size: 13.5px; color: #94a3b8; }
 
     .action-bar { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
-    .btn-nav { padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; border: 1px solid transparent; }
+    .btn-nav { padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; border: 1px solid transparent; cursor: pointer; }
     .btn-model-1 { background: #2563eb; color: #fff; }
     .btn-model-1:hover { background: #1d4ed8; }
     .btn-model-2 { background: #1e293b; color: #f8fafc; border-color: #38bdf8; }
@@ -42,16 +42,16 @@
   <div class="container">
     
     <div class="top-header">
-      <div class="badge">Vaga: Assistente de E-commerce & Operações (Casa Decor)</div>
+      <div class="badge">Vaga: Assistente de E-commerce e Operações (Casa Decor)</div>
       <h1>Thiago Nascimento Barbosa</h1>
       <p class="subtitle">Selecione o modelo de currículo desejado para visualização e impressão em PDF</p>
     </div>
 
     <!-- SELETOR DE VERSÕES -->
     <div class="action-bar">
-      <button class="btn-nav btn-model-1" onclick="loadCV('Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html')">📄 Modelo 1 (Clean Executivo)</button>
-      <button class="btn-nav btn-model-2" onclick="loadCV('Curriculo_Ecommerce_Operacoes_Dark_PTBR.html')">🎨 Modelo 2 (Padrão Master / Dark Sidebar)</button>
-      <a href="https://wa.me/5562996960056" target="_blank" class="btn-nav btn-wa">💬 Enviar no WhatsApp (62 99696-0056)</a>
+      <button class="btn-nav btn-model-1" onclick="loadCV('Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html')">Modelo 1 (Clean Executivo)</button>
+      <button class="btn-nav btn-model-2" onclick="loadCV('Curriculo_Ecommerce_Operacoes_Dark_PTBR.html')">Modelo 2 (Padrão Master / Dark)</button>
+      <a href="https://wa.me/5562996960056" target="_blank" class="btn-nav btn-wa">Enviar no WhatsApp (62 99696-0056)</a>
     </div>
 
     <!-- MENSAGEM DO WHATSAPP -->
@@ -71,21 +71,21 @@ Possuo experiência prática no ciclo operacional completo:
 • *Sistemas & Cadastro:* Facilidade com plataformas de e-commerce, tratamento e padronização de fotos de produtos.
 
 Como diferencial em sistemas e organização de processos, desenvolvi o projeto *ExPlan* (aplicação web para cálculo rápido de orçamentos, estruturação de quantitativos e parametrização de custos):
-👉 https://thiagonascimentobarbosapro.com
+Link: https://thiagonascimentobarbosapro.com
 
 Sou muito organizado, pontual e busco essa oportunidade para somar na rotina diária da loja e continuar aprimorando minhas competências.
 
 Segue meu currículo em anexo para avaliação. Estou à disposição para uma entrevista!</div>
 
-      <button class="btn-copy" onclick="copyText()">📋 Copiar Mensagem</button>
-      <div id="statusMsg" class="status-msg">✅ Mensagem copiada para a área de transferência!</div>
+      <button class="btn-copy" onclick="copyText()">Copiar Mensagem</button>
+      <div id="statusMsg" class="status-msg">Mensagem copiada para a área de transferência com sucesso.</div>
     </div>
 
     <!-- PREVIEW DO CURRÍCULO -->
     <div class="card">
       <div class="card-header">
         <div class="card-title" id="previewTitle">Pré-visualização do Currículo Selecionado</div>
-        <a id="directLink" href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" target="_blank" style="color:#38bdf8; font-size:12px; text-decoration:none; font-weight:600;">↗ Abrir em Nova Aba (Para Salvar em PDF)</a>
+        <a id="directLink" href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" target="_blank" style="color:#38bdf8; font-size:12px; text-decoration:none; font-weight:600;">Abrir em Nova Aba (Para Salvar em PDF)</a>
       </div>
       <iframe id="cvFrame" src="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" class="preview-frame"></iframe>
     </div>
@@ -96,7 +96,7 @@ Segue meu currículo em anexo para avaliação. Estou à disposição para uma e
     function loadCV(url) {
       document.getElementById('cvFrame').src = url;
       document.getElementById('directLink').href = url;
-      document.getElementById('previewTitle').innerText = 'Visualizando: ' + (url.includes('Dark') ? 'Modelo 2 (Padrão Master / Dark Sidebar)' : 'Modelo 1 (Clean Executivo)');
+      document.getElementById('previewTitle').innerText = 'Visualizando: ' + (url.includes('Dark') ? 'Modelo 2 (Padrão Master / Dark)' : 'Modelo 1 (Clean Executivo)');
     }
 
     function copyText() {
