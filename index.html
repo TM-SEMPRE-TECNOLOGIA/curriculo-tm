@@ -3,102 +3,263 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thiago Barbosa - Assistente de E-commerce e Operações</title>
+  <title>Thiago Nascimento Barbosa - Assistente de E-commerce e Operações</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; min-height: 100vh; padding: 25px 15px; }
-    .container { max-width: 900px; margin: 0 auto; }
     
-    .top-header { text-align: center; margin-bottom: 25px; }
-    .badge { display: inline-block; background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
-    h1 { font-size: 26px; font-weight: 800; color: #ffffff; margin-bottom: 6px; }
-    p.subtitle { font-size: 13.5px; color: #94a3b8; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9; color: #1e293b; line-height: 1.5;
+    }
 
-    .action-bar { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
-    .btn-nav { padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s; border: 1px solid transparent; cursor: pointer; }
-    .btn-model-1 { background: #2563eb; color: #fff; }
-    .btn-model-1:hover { background: #1d4ed8; }
-    .btn-wa { background: #16a34a; color: #fff; }
-    .btn-wa:hover { background: #15803d; }
+    .a4-container {
+      width: 210mm; min-height: 297mm; margin: 10mm auto; padding: 18mm 18mm;
+      background: #fff; box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
 
-    .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 22px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 25px; }
-    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
-    .card-title { font-size: 13.5px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; }
-    
-    .copy-box { background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 16px; font-size: 13.5px; line-height: 1.65; color: #e2e8f0; white-space: pre-wrap; word-break: break-word; }
-    
-    .btn-copy { background: #3b82f6; color: #fff; border: none; padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 14px; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-copy:hover { background: #2563eb; }
-    .status-msg { margin-top: 8px; font-size: 12px; color: #4ade80; display: none; font-weight: 600; }
+    /* HEADER */
+    header {
+      border-bottom: 2px solid #0f172a; padding-bottom: 14px; margin-bottom: 16px;
+    }
+    .header-main {
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .name {
+      font-weight: 800; font-size: 26px; color: #0f172a; letter-spacing: -0.5px;
+      line-height: 1.1; text-transform: uppercase;
+    }
+    .target-role {
+      font-size: 13.5px; font-weight: 700; color: #2563eb;
+      text-transform: uppercase; letter-spacing: 1.2px; margin-top: 4px;
+    }
+    .contact-info {
+      text-align: right; font-size: 11px; color: #475569; line-height: 1.55;
+    }
+    .contact-info a { color: #2563eb; text-decoration: none; font-weight: 500; }
 
-    .preview-frame { width: 100%; height: 950px; border: 1px solid #334155; border-radius: 8px; background: #fff; }
+    /* LAYOUT COLUMNS */
+    .layout-grid {
+      display: grid; grid-template-columns: 1fr 70mm; gap: 16mm;
+    }
+
+    .section { margin-bottom: 15px; }
+    .section-title {
+      font-size: 11.5px; font-weight: 800; color: #0f172a;
+      text-transform: uppercase; letter-spacing: 1.1px;
+      border-bottom: 1.5px solid #e2e8f0; padding-bottom: 3px;
+      margin-bottom: 9px; display: flex; align-items: center; gap: 6px;
+    }
+    .section-title::before {
+      content: ""; display: inline-block; width: 5px; height: 11px; background: #2563eb; border-radius: 2px;
+    }
+
+    .summary-text {
+      font-size: 10.8px; color: #334155; text-align: justify; line-height: 1.5;
+    }
+    .summary-text strong { color: #0f172a; }
+
+    /* EXPERIENCIA */
+    .exp-item { margin-bottom: 12px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .exp-company { font-weight: 700; font-size: 12px; color: #0f172a; }
+    .exp-date { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: #64748b; font-weight: 600; }
+    .exp-role { font-weight: 600; font-size: 11px; color: #2563eb; margin-bottom: 2px; }
+    .exp-bullets { list-style: none; font-size: 10.2px; color: #334155; }
+    .exp-bullets li { margin-bottom: 3px; padding-left: 11px; position: relative; line-height: 1.4; }
+    .exp-bullets li::before {
+      content: "-"; position: absolute; left: 0; color: #2563eb; font-weight: bold;
+    }
+
+    /* SIDEBAR / COLUNA DIREITA */
+    .side-box {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 5px;
+      padding: 10px; margin-bottom: 12px;
+    }
+    .side-box-title {
+      font-size: 10.5px; font-weight: 700; color: #0f172a; text-transform: uppercase;
+      letter-spacing: 0.7px; margin-bottom: 6px; border-bottom: 1px solid #cbd5e1; padding-bottom: 3px;
+    }
+    .side-list { list-style: none; font-size: 10px; color: #334155; }
+    .side-list li { margin-bottom: 4px; padding-left: 9px; position: relative; line-height: 1.35; }
+    .side-list li::before {
+      content: "-"; position: absolute; left: 0; color: #2563eb; font-weight: bold;
+    }
+
+    .tools-category { font-size: 9.5px; font-weight: 700; color: #0f172a; margin-top: 5px; margin-bottom: 3px; text-transform: uppercase; }
+    .badge-wrap { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+    .badge {
+      font-family: 'JetBrains Mono', monospace; font-size: 8.5px;
+      background: #e2e8f0; border: 1px solid #cbd5e1; padding: 2px 5px;
+      border-radius: 3px; color: #1e293b; font-weight: 500;
+    }
+
+    .value-prop-box {
+      background: #eff6ff; border-left: 3px solid #2563eb;
+      padding: 8px 9px; font-size: 10px; color: #1e40af; line-height: 1.4; margin-bottom: 12px;
+    }
+
+    @media print {
+      body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .a4-container { width: 100%; min-height: auto; margin: 0; padding: 10mm 12mm; box-shadow: none; }
+      .side-box, .value-prop-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      @page { size: A4; margin: 0; }
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="a4-container">
     
-    <div class="top-header">
-      <div class="badge">Vaga: Assistente de E-commerce e Operações (Casa Decor)</div>
-      <h1>Thiago Nascimento Barbosa</h1>
-      <p class="subtitle">Currículo Executivo e Mensagem Estratégica para WhatsApp</p>
-    </div>
-
-    <!-- BARRA DE AÇÕES -->
-    <div class="action-bar">
-      <a href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" target="_blank" class="btn-nav btn-model-1">Abrir Currículo em Nova Aba (PDF)</a>
-      <a href="https://wa.me/5562996960056" target="_blank" class="btn-nav btn-wa">Enviar no WhatsApp (62 99696-0056)</a>
-    </div>
-
-    <!-- MENSAGEM DO WHATSAPP -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">Mensagem Formatada para o WhatsApp (Casa Decor + Explan)</div>
-        <span style="font-size: 11px; color: #64748b;">Pronta para envio</span>
+    <!-- HEADER -->
+    <header>
+      <div class="header-main">
+        <div>
+          <h1 class="name">Thiago Nascimento Barbosa</h1>
+          <div class="target-role">Assistente de E-commerce & Operações</div>
+        </div>
+        <div class="contact-info">
+          <div>Goiânia, GO | (62) 99604-6458</div>
+          <div>thiagonascimento.barbosapro@gmail.com</div>
+          <div><a href="https://thiagonascimentobarbosapro.com" target="_blank">thiagonascimentobarbosapro.com</a></div>
+        </div>
       </div>
+    </header>
 
-      <div class="copy-box" id="copyText">Olá, bom dia! Estou deixando esta mensagem registrada para sua avaliação logo pela manhã.
+    <!-- LAYOUT -->
+    <div class="layout-grid">
+      
+      <!-- COLUNA PRINCIPAL (ESQUERDA) -->
+      <main>
+        
+        <!-- RESUMO -->
+        <section class="section">
+          <div class="section-title">Resumo Profissional</div>
+          <p class="summary-text">
+            Profissional disciplinado e focado em <strong>otimização de processos, controle operacional e atendimento ao cliente</strong>. Trago vivência prática completa na esteira de e-commerce e logística: <strong>gestão de estoque físico/sistêmico, separação e conferência minuciosa de itens delicados/decorativos, embalagem segura (picking & packing) e expedição ágil</strong>. Destaco-me pela facilidade com sistemas, automação de dados e precificação (como no desenvolvimento do sistema <strong>Explan</strong> para cálculo de custos e orçamentos), rigor cadastral de produtos, tratamento fotográfico para catálogos e suporte ágil via WhatsApp/SAC.
+          </p>
+        </section>
 
-Meu nome é *Thiago Barbosa* e tenho total interesse na vaga de *Assistente de E-commerce e Operações*.
+        <!-- EXPERIENCIA PROFISSIONAL -->
+        <section class="section">
+          <div class="section-title">Histórico Profissional</div>
 
-Possuo experiência prática no ciclo operacional completo:
-• *Estoque & Expedição:* Controle rigoroso de inventário, separação e embalagem protegida de itens delicados/decorativos para despacho sem avarias;
-• *Atendimento & Vendas:* Suporte humanizado, SAC e pós-venda via WhatsApp com comunicação empática e ágil;
-• *Sistemas & Cadastro:* Facilidade com plataformas de e-commerce, tratamento e padronização de fotos de produtos.
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Maffeng / Explan — Orçamentos, Engenharia & Operações</span>
+              <span class="exp-date">2024 &mdash; 2026</span>
+            </div>
+            <div class="exp-role">Analista de Operações, Orçamentos (Explan) & Automação de Processos</div>
+            <ul class="exp-bullets">
+              <li><strong>Modelagem & Estruturação do Sistema Explan:</strong> Atuação no desenvolvimento e operação da plataforma <strong>Explan</strong>, automatizando a parametrização de custos, quantitativos e geração de orçamentos precisos, eliminando retrabalhos e inconsistências.</li>
+              <li><strong>Otimização de Rotinas Operacionais:</strong> Reestruturação de fluxos de dados e implementação de automações que <strong>reduziram em 85% o tempo</strong> de compilação de relatórios e documentações técnicas.</li>
+              <li><strong>Curadoria Fotográfica & Rigor Cadastral:</strong> Tratamento, conferência e padronização visual de registros fotográficos detalhados para compor laudos e documentações de 9 grandes contratos institucionais (Banco do Brasil, Correios, SEAD).</li>
+            </ul>
+          </div>
 
-Como diferencial em sistemas e organização de processos, desenvolvi o projeto *Explan* (aplicação web para cálculo rápido de orçamentos, estruturação de quantitativos e parametrização de custos):
-Link: https://thiagonascimentobarbosapro.com
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Moto Brasil Peças e Acessórios Ltda</span>
+              <span class="exp-date">2023 &mdash; 2023</span>
+            </div>
+            <div class="exp-role">Assistente de Operações Logísticas & Estoquista</div>
+            <ul class="exp-bullets">
+              <li><strong>Gestão e Acuracidade de Estoque:</strong> Controle físico e sistêmico de inventário, garantindo perfeita conciliação de saldo em sistema e prevenção de rupturas.</li>
+              <li><strong>Separação, Conferência e Expedição:</strong> Execução ágil do fluxo de <em>picking & packing</em> (separação, conferência de códigos e embalagem protegida), prevenindo avarias e erros de despacho.</li>
+              <li><strong>Organização e Armazenagem:</strong> Mapeamento e endereçamento de posições de estoque para acelerar o tempo de separação e saída de pedidos.</li>
+            </ul>
+          </div>
 
-Sou muito organizado, pontual e busco essa oportunidade para somar na rotina diária da loja e continuar aprimorando minhas competências.
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Brasil Telecom Call Center S/A</span>
+              <span class="exp-date">2022 &mdash; 2022</span>
+            </div>
+            <div class="exp-role">Operador de Suporte ao Cliente (SAC) & Pós-Venda</div>
+            <ul class="exp-bullets">
+              <li><strong>Atendimento Multicanal e Pós-Venda:</strong> Atendimento de alto volume focado na resolução rápida de dúvidas (FCR), acompanhamento de pedidos e suporte a clientes.</li>
+              <li><strong>Comunicação e Resolução de Conflitos:</strong> Comunicação empática, clara e resolutiva, essencial para o suporte e vendas consultivas via WhatsApp.</li>
+            </ul>
+          </div>
 
-Segue meu currículo em anexo para avaliação. Estou à disposição para uma entrevista!</div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Promed</span>
+              <span class="exp-date">2019 &mdash; 2021</span>
+            </div>
+            <div class="exp-role">Auxiliar Administrativo & Backoffice</div>
+            <ul class="exp-bullets">
+              <li>Organização de arquivos, controle de documentações contratuais e alimentação de planilhas de gestão.</li>
+            </ul>
+          </div>
 
-      <button class="btn-copy" onclick="copyText()">Copiar Mensagem</button>
-      <div id="statusMsg" class="status-msg">Mensagem copiada para a área de transferência com sucesso.</div>
-    </div>
+        </section>
 
-    <!-- PREVIEW DO CURRÍCULO -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">Pré-visualização do Currículo (Modelo Executivo)</div>
-        <a href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" target="_blank" style="color:#38bdf8; font-size:12px; text-decoration:none; font-weight:600;">Abrir em Nova Aba (Para Salvar em PDF)</a>
-      </div>
-      <iframe src="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" class="preview-frame"></iframe>
+      </main>
+
+      <!-- COLUNA LATERAL (DIREITA) -->
+      <aside>
+
+        <div class="value-prop-box">
+          <strong>Comprometimento & Foco:</strong> Motivado a somar imediatamente na esteira operacional da loja, com rapidez de adaptação, dedicação integral e foco na experiência do cliente.
+        </div>
+
+        <div class="side-box">
+          <div class="side-box-title">Diferenciais Operacionais</div>
+          <ul class="side-list">
+            <li><strong>Estoque & Acuracidade:</strong> Inventário físico/sistêmico e prevenção de rupturas.</li>
+            <li><strong>Expedição Cuidadosa:</strong> Conferência minuciosa e embalagem segura para itens frágeis.</li>
+            <li><strong>Cadastro de Produtos:</strong> Títulos, medidas, descrições detalhadas e SEO.</li>
+            <li><strong>Fotografia de Produto:</strong> Enquadramento, iluminação e tratamento para e-commerce.</li>
+            <li><strong>SAC & WhatsApp:</strong> Atendimento cordial, suporte ágil e pós-venda resolutivo.</li>
+          </ul>
+        </div>
+
+        <div class="side-box">
+          <div class="side-box-title">Sistemas & Ferramentas</div>
+          
+          <div class="tools-category">E-commerce & Vendas</div>
+          <div class="badge-wrap">
+            <span class="badge">WhatsApp Business</span>
+            <span class="badge">Plataformas E-commerce</span>
+            <span class="badge">Bling / Tiny ERP / Nuvemshop</span>
+            <span class="badge">Marketplaces</span>
+          </div>
+
+          <div class="tools-category">Planilhas & Dados</div>
+          <div class="badge-wrap">
+            <span class="badge">Excel Avançado</span>
+            <span class="badge">Google Sheets</span>
+            <span class="badge">Fórmulas & PROCV</span>
+            <span class="badge">Tabelas Dinâmicas</span>
+          </div>
+
+          <div class="tools-category">Imagem & Produtividade</div>
+          <div class="badge-wrap">
+            <span class="badge">Edição de Fotos</span>
+            <span class="badge">Photoshop / Canva</span>
+            <span class="badge">Automação de Tarefas</span>
+            <span class="badge">Inteligência Artificial (IA)</span>
+          </div>
+        </div>
+
+        <div class="side-box">
+          <div class="side-box-title">Formação & Cursos</div>
+          <ul class="side-list">
+            <li><strong>Fórmula Negócio Online (FNO):</strong> Estrutura de Negócios e Produtos Digitais, Arquitetura de Conversão e E-commerce.</li>
+            <li><strong>Comunidade Sobral de Tráfego:</strong> Análise de Comportamento do Usuário, Métricas de Conversão e Funis (2 anos).</li>
+            <li><strong>AI Coders Academy:</strong> Automações de Processos e Produtividade com Inteligência Artificial (1 ano).</li>
+            <li><strong>Qualificações Técnicas:</strong> Informática Avançada, Gestão de Processos e Design de Interfaces.</li>
+            <li><strong>Ensino Médio Completo</strong></li>
+          </ul>
+        </div>
+
+      </aside>
+
     </div>
 
   </div>
-
-  <script>
-    function copyText() {
-      const text = document.getElementById('copyText').innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        const msg = document.getElementById('statusMsg');
-        msg.style.display = 'block';
-        setTimeout(() => { msg.style.display = 'none'; }, 3500);
-      });
-    }
-  </script>
 
 </body>
 </html>
