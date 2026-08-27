@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiago Nascimento Barbosa - Assistente de E-commerce e Operações</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f1f5f9; color: #1e293b; line-height: 1.5;
+    }
+
+    .a4-container {
+      width: 210mm; min-height: 297mm; margin: 10mm auto; padding: 22mm 20mm;
+      background: #fff; box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    /* HEADER */
+    header {
+      border-bottom: 2px solid #0f172a; padding-bottom: 16px; margin-bottom: 20px;
+    }
+    .header-main {
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .name {
+      font-weight: 800; font-size: 27px; color: #0f172a; letter-spacing: -0.5px;
+      line-height: 1.1; text-transform: uppercase;
+    }
+    .target-role {
+      font-size: 14px; font-weight: 700; color: #2563eb;
+      text-transform: uppercase; letter-spacing: 1.2px; margin-top: 5px;
+    }
+    .contact-info {
+      text-align: right; font-size: 11.5px; color: #475569; line-height: 1.6;
+    }
+    .contact-info a { color: #2563eb; text-decoration: none; font-weight: 500; }
+
+    /* LAYOUT COLUMNS */
+    .layout-grid {
+      display: grid; grid-template-columns: 1fr 68mm; gap: 20mm;
+    }
+
+    .section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 12px; font-weight: 800; color: #0f172a;
+      text-transform: uppercase; letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #e2e8f0; padding-bottom: 4px;
+      margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+    }
+    .section-title::before {
+      content: ""; display: inline-block; width: 6px; height: 12px; background: #2563eb; border-radius: 2px;
+    }
+
+    .summary-text {
+      font-size: 11px; color: #334155; text-align: justify; line-height: 1.55;
+    }
+    .summary-text strong { color: #0f172a; }
+
+    /* EXPERIENCIA */
+    .exp-item { margin-bottom: 13px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .exp-company { font-weight: 700; font-size: 12.5px; color: #0f172a; }
+    .exp-date { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #64748b; font-weight: 600; }
+    .exp-role { font-weight: 600; font-size: 11.5px; color: #2563eb; margin-bottom: 3px; }
+    .exp-bullets { list-style: none; font-size: 10.5px; color: #334155; }
+    .exp-bullets li { margin-bottom: 3px; padding-left: 12px; position: relative; line-height: 1.45; }
+    .exp-bullets li::before {
+      content: "▪"; position: absolute; left: 0; color: #2563eb; font-size: 10px; top: -1px;
+    }
+
+    /* SIDEBAR / COLUNA DIREITA */
+    .side-box {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;
+      padding: 12px; margin-bottom: 14px;
+    }
+    .side-box-title {
+      font-size: 11px; font-weight: 700; color: #0f172a; text-transform: uppercase;
+      letter-spacing: 0.8px; margin-bottom: 8px; border-bottom: 1px solid #cbd5e1; padding-bottom: 3px;
+    }
+    .side-list { list-style: none; font-size: 10.5px; color: #334155; }
+    .side-list li { margin-bottom: 5px; padding-left: 10px; position: relative; line-height: 1.4; }
+    .side-list li::before {
+      content: "•"; position: absolute; left: 0; color: #2563eb; font-weight: bold;
+    }
+
+    .badge-wrap { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .badge {
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      background: #e2e8f0; border: 1px solid #cbd5e1; padding: 2px 6px;
+      border-radius: 3px; color: #1e293b; font-weight: 500;
+    }
+
+    .value-prop-box {
+      background: #eff6ff; border-left: 3px solid #2563eb;
+      padding: 8px 10px; font-size: 10.5px; color: #1e40af; line-height: 1.45; margin-bottom: 14px;
+    }
+
+    @media print {
+      body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .a4-container { width: 100%; min-height: auto; margin: 0; padding: 12mm 15mm; box-shadow: none; }
+      .side-box, .value-prop-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      @page { size: A4; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="a4-container">
+    
+    <!-- HEADER (SEM FOTO - ATS FRIENDLY & EXECUTIVO) -->
+    <header>
+      <div class="header-main">
+        <div>
+          <h1 class="name">Thiago Nascimento Barbosa</h1>
+          <div class="target-role">Assistente de E-commerce & Operações</div>
+        </div>
+        <div class="contact-info">
+          <div>Goiânia, GO &bull; (62) 99604-6458</div>
+          <div>thiagonascimento.barbosapro@gmail.com</div>
+          <div><a href="https://thiagonascimentobarbosapro.com" target="_blank">thiagonascimentobarbosapro.com</a></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- LAYOUT -->
+    <div class="layout-grid">
+      
+      <!-- COLUNA PRINCIPAL (ESQUERDA) -->
+      <main>
+        
+        <!-- RESUMO -->
+        <section class="section">
+          <div class="section-title">Resumo Profissional & Proposta de Valor</div>
+          <p class="summary-text">
+            Profissional disciplinado e focado em <strong>otimização de processos, controle operacional e atendimento de excelência</strong>. Trago vivência prática completa na esteira de e-commerce e logística: <strong>controle de estoque físico e sistêmico, separação e conferência minuciosa de itens delicados/decorativos, embalagem segura (picking & packing) e expedição ágil</strong>. Aliando atenção extrema aos detalhes, facilidade técnica com cadastro de produtos, tratamento fotográfico para catálogos e suporte ágil via WhatsApp/SAC, busco esta oportunidade com alto comprometimento para impulsionar a operação diária e continuar aprimorando minhas competências operacionais e de relacionamento.
+          </p>
+        </section>
+
+        <!-- EXPERIENCIA PROFISSIONAL -->
+        <section class="section">
+          <div class="section-title">Histórico Profissional</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Maffeng — Engenharia, Manutenção & Operações</span>
+              <span class="exp-date">2024 &mdash; Atual</span>
+            </div>
+            <div class="exp-role">Analista de Operações, Documentação & Otimização de Processos</div>
+            <ul class="exp-bullets">
+              <li><strong>Otimização e Eliminação de Gargalos:</strong> Estruturação de fluxos operacionais e criação de rotinas automatizadas que <strong>reduziram em até 85% o tempo</strong> de processamento e consolidação de cadastros e relatórios técnicos.</li>
+              <li><strong>Padronização e Tratamento Fotográfico:</strong> Curadoria, conferência e edição/tratamento de centenas de registros fotográficos detalhados para relatórios executivos e documentações padronizadas.</li>
+              <li><strong>Controle de Dados e Qualidade Cadastral:</strong> Gestão de dados cadastrais para 9 grandes contratos institucionais (Banco do Brasil, Correios, SEAD), mantendo rigor absoluto de prazos e conformidade.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Moto Brasil Peças e Acessórios Ltda</span>
+              <span class="exp-date">2023 &mdash; 2023</span>
+            </div>
+            <div class="exp-role">Assistente de Operações Logísticas & Estoquista</div>
+            <ul class="exp-bullets">
+              <li><strong>Gestão e Acuracidade de Estoque:</strong> Controle diário do inventário físico e atualização sistêmica, garantindo perfeita correspondência entre estoque real e registrado.</li>
+              <li><strong>Separação, Conferência e Expedição:</strong> Execução ágil e cuidadosa de <em>picking & packing</em> (separação, conferência de código/especificação e embalagem protegida), prevenindo avarias e erros de despacho.</li>
+              <li><strong>Organização e Armazenagem:</strong> Estruturação de endereçamento para otimizar o fluxo de separação e agilizar os tempos de saída de mercadorias.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Brasil Telecom Call Center S/A</span>
+              <span class="exp-date">2022 &mdash; 2022</span>
+            </div>
+            <div class="exp-role">Operador de Suporte ao Cliente (SAC) & Pós-Venda</div>
+            <ul class="exp-bullets">
+              <li><strong>Atendimento Humanizado e Resolutivo:</strong> Atendimento receptivo e ativo de alto volume, com foco em resolução rápida de dúvidas, acompanhamento de pedidos e pós-venda.</li>
+              <li><strong>Comunicação Escrita e Verbal:</strong> Clareza na comunicação, condução empática de solicitações e suporte consultivo via canais digitais.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-company">Promed</span>
+              <span class="exp-date">2019 &mdash; 2021</span>
+            </div>
+            <div class="exp-role">Auxiliar Administrativo & Backoffice</div>
+            <ul class="exp-bullets">
+              <li>Organização de arquivos, conciliação e suporte contínuo às rotinas operacionais e administrativas.</li>
+            </ul>
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- COLUNA LATERAL (DIREITA) -->
+      <aside>
+
+        <div class="value-prop-box">
+          <strong>Comprometimento & Foco:</strong> Motivado a somar imediatamente na esteira operacional da loja, com rapidez de adaptação e dedicação para aprimorar minhas habilidades e a experiência do cliente.
+        </div>
+
+        <div class="side-box">
+          <div class="side-box-title">Diferenciais Operacionais</div>
+          <ul class="side-list">
+            <li><strong>Estoque e Acuracidade:</strong> Contagem, organização física e atualização em sistema.</li>
+            <li><strong>Expedição Cuidadosa:</strong> Conferência minuciosa e embalagem segura para itens frágeis.</li>
+            <li><strong>Cadastro de Produtos:</strong> Títulos, medidas, descrições detalhadas e atributos.</li>
+            <li><strong>Fotografia de Produto:</strong> Enquadramento, iluminação e tratamento para e-commerce.</li>
+            <li><strong>SAC & WhatsApp:</strong> Atendimento cordial, suporte ágil e pós-venda resolutivo.</li>
+          </ul>
+        </div>
+
+        <div class="side-box">
+          <div class="side-box-title">Sistemas & Ferramentas</div>
+          <div class="badge-wrap">
+            <span class="badge">WhatsApp Business</span>
+            <span class="badge">Plataformas E-commerce</span>
+            <span class="badge">Excel / Google Sheets</span>
+            <span class="badge">Edição de Fotos</span>
+            <span class="badge">ERPs / Estoque</span>
+            <span class="badge">Automação de Tarefas</span>
+            <span class="badge">Inteligência Artificial</span>
+          </div>
+        </div>
+
+        <div class="side-box">
+          <div class="side-box-title">Formação & Aperfeiçoamento</div>
+          <ul class="side-list">
+            <li><strong>Negócios Digitais & E-commerce:</strong> Estruturas de lojas virtuais, páginas de produto e conversão.</li>
+            <li><strong>Métricas de Vendas & Tráfego:</strong> Noções de comportamento do consumidor online.</li>
+            <li><strong>Informática Avançada & Automação</strong></li>
+            <li><strong>Ensino Médio Completo</strong></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
