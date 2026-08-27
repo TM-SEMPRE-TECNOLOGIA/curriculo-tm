@@ -3,285 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thiago Nascimento Barbosa - Product Designer (Fintech & Inovação)</title>
+  <title>Opção 1 — Cirúrgica & Completa (Fit Casa Decor + ExPlan) - Thiago Barbosa</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
-    
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #f8fafc; min-height: 100vh; padding: 30px 15px; }
+    .container { max-width: 780px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .badge-top { display: inline-block; background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+    h1 { font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+    .strategy { font-size: 13px; color: #94a3b8; line-height: 1.5; background: #1e293b; border-left: 4px solid #38bdf8; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 25px; }
     
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f4f1; color: #1a1a1a; line-height: 1.6;
-    }
+    .nav-bar { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px; }
+    .nav-link { padding: 6px 14px; background: #1e293b; color: #cbd5e1; border: 1px solid #334155; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 600; transition: all 0.2s; }
+    .nav-link.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .nav-link:hover { border-color: #38bdf8; }
 
-    .a4-container {
-      width: 210mm; min-height: 297mm; margin: 10mm auto;
-      background: #fff; box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      display: grid; grid-template-columns: 78mm 1fr;
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-      background: #1a1a1a; color: #d4d2cb; padding: 26mm 12mm 12mm 12mm;
-    }
-
-    .avatar-area { margin-bottom: 25px; text-align: center; }
-    .avatar-img {
-      width: 110px; height: 110px; border-radius: 50%;
-      object-fit: cover; display: inline-block;
-      border: 3px solid #C8541C; margin-bottom: 12px;
-    }
-    .side-name {
-      font-weight: 700; font-size: 13px; letter-spacing: 1px;
-      text-transform: uppercase; color: #fff;
-    }
-    .side-tagline {
-      font-size: 11px; color: #C8541C; font-weight: 500; margin-top: 4px;
-    }
-
-    .contact-block { margin-bottom: 25px; }
-    .contact-item {
-      font-size: 11px; color: #aaa69c; margin-bottom: 8px;
-      display: flex; align-items: center; gap: 8px; word-break: break-all;
-    }
-    .contact-item svg { width: 14px; height: 14px; stroke: #C8541C; fill: none; stroke-width: 2; flex-shrink: 0; }
-    .contact-item a { color: #d4d2cb; text-decoration: none; }
-    .contact-item a:hover { color: #C8541C; }
-
-    .side-title {
-      font-size: 11px; font-weight: 700; color: #fff;
-      text-transform: uppercase; letter-spacing: 1.5px;
-      margin-bottom: 10px; margin-top: 20px;
-      border-bottom: 1px solid #333; padding-bottom: 4px;
-    }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); margin-bottom: 25px; }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #334155; padding-bottom: 12px; }
+    .card-title { font-size: 14px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; }
     
-    .skills-list { list-style: none; }
-    .skills-list li {
-      font-size: 11px; color: #d4d2cb; margin-bottom: 5px;
-      padding-left: 12px; position: relative;
-    }
-    .skills-list li::before {
-      content: ""; position: absolute; left: 0; top: 6px;
-      width: 4px; height: 4px; border-radius: 50%; background: #C8541C;
-    }
-
-    .tech-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-    .badge {
-      font-family: 'JetBrains Mono', monospace; font-size: 9px;
-      background: #2a2a2a; border: 1px solid #444; padding: 2px 7px;
-      border-radius: 3px; color: #d4d2cb;
-    }
-
-    /* MAIN CONTENT */
-    .main-content { padding: 26mm 14mm 10mm 14mm; }
-
-    .name {
-      font-weight: 800; font-size: 28px; color: #1a1a1a;
-      letter-spacing: -0.5px; line-height: 1.1;
-    }
-    .role {
-      font-size: 13px; font-weight: 600; color: #C8541C;
-      text-transform: uppercase; letter-spacing: 1.5px;
-      margin-top: 6px; margin-bottom: 16px;
-    }
-
-    .summary {
-      font-size: 11.5px; color: #5C5A55; text-align: justify;
-      margin-bottom: 20px; line-height: 1.6;
-    }
-    .summary strong { color: #1a1a1a; }
-
-    .main-title {
-      font-size: 12px; font-weight: 700; color: #1a1a1a;
-      text-transform: uppercase; letter-spacing: 1.5px;
-      border-bottom: 2px solid #e8e5de; padding-bottom: 4px;
-      margin-bottom: 12px; margin-top: 18px;
-    }
-
-    .exp-item { margin-bottom: 15px; }
-    .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .exp-company { font-weight: 700; font-size: 13px; color: #1a1a1a; }
-    .exp-date { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #8C8A85; }
-    .exp-role { font-weight: 600; font-size: 12px; color: #C8541C; margin-bottom: 3px; }
-    .exp-desc { font-size: 11px; color: #5C5A55; margin-left: 14px; }
-    .exp-desc li { margin-bottom: 3px; }
-
-    .highlight-box {
-      background: #f8f6f2; border-left: 3px solid #C8541C;
-      padding: 8px 10px; margin: 12px 0; font-size: 10.5px; color: #5C5A55;
-    }
-    .highlight-box strong { color: #1a1a1a; }
-
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .skill-cat { font-weight: 600; font-size: 11.5px; color: #1a1a1a; margin-bottom: 4px; }
-    .skill-cat-list { list-style: none; font-size: 10.5px; color: #5C5A55; }
-    .skill-cat-list li { margin-bottom: 2px; padding-left: 10px; position: relative; }
-    .skill-cat-list li::before {
-      content: "•"; position: absolute; left: 0; color: #C8541C; font-weight: 700;
-    }
-
-    @media print {
-      body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .a4-container { width: 100%; min-height: auto; margin: 0; box-shadow: none; grid-template-columns: 78mm 1fr; }
-      .sidebar, .highlight-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      @page { size: A4; margin: 0; }
-    }
+    .copy-box { background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 18px; font-family: system-ui, sans-serif; font-size: 14px; line-height: 1.65; color: #e2e8f0; white-space: pre-wrap; word-break: break-word; }
+    
+    .btn-row { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; cursor: pointer; border: none; transition: 0.2s; }
+    .btn-copy { background: #2563eb; color: #fff; }
+    .btn-copy:hover { background: #1d4ed8; }
+    .btn-cv { background: #334155; color: #f8fafc; }
+    .btn-cv:hover { background: #475569; }
+    .btn-wa { background: #16a34a; color: #fff; }
+    .btn-wa:hover { background: #15803d; }
+    
+    .status-msg { margin-top: 10px; font-size: 12px; color: #4ade80; display: none; font-weight: 600; }
   </style>
 </head>
 <body>
 
-  <div class="a4-container">
+  <div class="container">
     
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <div class="avatar-area">
-        <img class="avatar-img" src="Foto perfil.jpeg" alt="Thiago N. Barbosa">
-        <div class="side-name">Thiago N. Barbosa</div>
-        <div class="side-tagline">Product Designer</div>
-      </div>
-
-      <div class="contact-block">
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          <span>(62) 99604-6458</span>
-        </div>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>thiagonascimento.barbosapro@gmail.com</span>
-        </div>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Goiânia, GO</span>
-        </div>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
-          <a href="https://thiagonascimentobarbosapro.com" target="_blank">thiagonascimentobarbosapro.com</a>
-        </div>
-      </div>
-
-      <div class="side-title">Core Skills em Design</div>
-      <ul class="skills-list">
-        <li>Mapeamento de Jornadas End-to-End</li>
-        <li>Design Multi-Canal (Web & Mobile)</li>
-        <li>UX Research & Validação Contínua</li>
-        <li>Design Systems & Componentes</li>
-        <li>Interfaces de Dados & Fintech</li>
-        <li>Prototipagem Ágil & Microinterações</li>
-        <li>AI-Driven UX & Automações</li>
-        <li>Design Thinking & Service Design</li>
-      </ul>
-
-      <div class="side-title">Ferramentas & Stack</div>
-      <div class="tech-badges">
-        <span class="badge">Figma</span>
-        <span class="badge">Next.js</span>
-        <span class="badge">React</span>
-        <span class="badge">Tailwind CSS</span>
-        <span class="badge">TypeScript</span>
-        <span class="badge">Python</span>
-        <span class="badge">FastAPI</span>
-        <span class="badge">PostgreSQL</span>
-        <span class="badge">Supabase</span>
-        <span class="badge">Playwright (E2E)</span>
-        <span class="badge">Claude AI</span>
-        <span class="badge">Cursor AI</span>
-      </div>
-
-      <div class="side-title">Idiomas</div>
-      <ul class="skills-list">
-        <li>Português — Nativo</li>
-        <li>Inglês — Leitura Técnica & Interface</li>
-      </ul>
+    <div class="header">
+      <div class="badge-top">Vaga: Assistente de E-commerce & Operações (Casa Decor)</div>
+      <h1>Opção 1 — Cirúrgica & Completa (Fit Casa Decor + ExPlan)</h1>
+      <div class="strategy"><strong>Estratégia desta versão:</strong> Equilíbrio ideal: demonstra cuidado com peças de decoração, estoquista/expedição, SAC WhatsApp e apresenta o aplicativo ExPlan como prova de domínio técnico e raciocínio lógico.</div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-      <div class="name">THIAGO NASCIMENTO<br>BARBOSA</div>
-      <div class="role">Product Designer &bull; UX/UI & Inovação Digital (Fintech / B2B)</div>
+    <!-- NAVEGACAO ENTRE AS 5 COPYS -->
+    <div class="nav-bar">
+      <a href="copy1.html" class="nav-link active">Opção 1</a><a href="copy2.html" class="nav-link ">Opção 2</a><a href="copy3.html" class="nav-link ">Opção 3</a><a href="copy4.html" class="nav-link ">Opção 4</a><a href="copy5.html" class="nav-link ">Opção 5</a>
+      <a href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" class="nav-link" style="background:#0f766e; border-color:#0f766e; color:#fff;">📄 Ver Currículo</a>
+    </div>
 
-      <div class="summary">
-        <strong>Product Designer com foco em resolver problemas operacionais e financeiros complexos através de jornadas fluidas de ponta a ponta.</strong> Especialista em transformar processos analógicos, densos e burocráticos em produtos digitais escaláveis, intuitivos e de alta produtividade (Web e Mobile). Conhecimento prático em ambientes de alta conformidade e regras de negócio rígidas (atuação com contas do <strong>Banco do Brasil</strong> e <strong>Correios</strong>), unindo <strong>visão analítica de dados, design system responsivo e tecnologias de automação/IA</strong> para maximizar métricas de negócio e eliminar atritos de uso.
+    <!-- CARD DA COPY -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Texto Formatado para WhatsApp (62 99696-0056)</div>
+        <span style="font-size: 11px; color: #64748b;">Pronto para envio</span>
       </div>
 
-      <div class="main-title">Experiência Profissional em Design & Produto</div>
+      <div class="copy-box" id="copyText">Olá, bom dia! Estou deixando esta mensagem registrada para sua avaliação logo pela manhã.
 
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Maffeng — Engenharia, Manutenção & Operações</div>
-          <div class="exp-date">2024 &mdash; Atual</div>
-        </div>
-        <div class="exp-role">Product Designer & Arquiteto de Experiência (Sistemas Internos)</div>
-        <ul class="exp-desc">
-          <li><strong>Mapeamento de Jornada End-to-End:</strong> Desenhei do zero o fluxo completo de captura, tratamento, conferência e aprovação de relatórios de vistoria e orçamentos para 9 grandes contratos bancários e governamentais (Banco do Brasil, Correios, SEAD).</li>
-          <li><strong>Design Multi-Canal e Redução de Fricção:</strong> Constatei dores críticas no uso em campo e backoffice, projetando interfaces mobile-first para técnicos de campo e dashboards desktop com visualização de dados densos para auditores e gestores.</li>
-          <li><strong>Impacto Real no Produto:</strong> A reformulação da jornada reduziu em <strong>85% o tempo de criação e entrega de documentos técnicos</strong>, blindando a operação contra erros de compliance e atrasos de SLA.</li>
-        </ul>
+Meu nome é *Thiago Barbosa* e tenho total interesse na vaga de *Assistente de E-commerce e Operações*.
+
+Possuo experiência prática no ciclo operacional completo:
+• *Estoque & Expedição:* Controle rigoroso de inventário, separação e embalagem protegida de itens delicados/decorativos para despacho sem avarias;
+• *Atendimento & Vendas:* Suporte humanizado, SAC e pós-venda via WhatsApp com comunicação empática e ágil;
+• *Sistemas & Cadastro:* Facilidade com plataformas de e-commerce, tratamento e padronização de fotos de produtos.
+
+Como diferencial em sistemas e organização de processos, desenvolvi o projeto *ExPlan* (aplicação web para cálculo rápido de orçamentos, estruturação de quantitativos e parametrização de custos):
+👉 https://thiagonascimentobarbosapro.com
+
+Sou muito organizado, pontual e busco essa oportunidade para somar na rotina diária da loja e continuar aprimorando minhas competências.
+
+Segue meu currículo em anexo para avaliação. Estou à disposição para uma entrevista!</div>
+
+      <div class="btn-row">
+        <button class="btn btn-copy" onclick="copyToClipboard()">📋 Copiar Mensagem</button>
+        <a href="https://wa.me/5562996960056?text=Ol%C3%A1%2C%20bom%20dia!%20Estou%20deixando%20esta%20mensagem%20registrada%20para%20sua%20avalia%C3%A7%C3%A3o%20logo%20pela%20manh%C3%A3.%0A%0AMeu%20nome%20%C3%A9%20*Thiago%20Barbosa*%20e%20tenho%20total%20interesse%20na%20vaga%20de%20*Assistente%20de%20E-commerce%20e%20Opera%C3%A7%C3%B5es*.%0A%0APossuo%20experi%C3%AAncia%20pr%C3%A1tica%20no%20ciclo%20operacional%20completo%3A%0A%E2%80%A2%20*Estoque%20%26%20Expedi%C3%A7%C3%A3o%3A*%20Controle%20rigoroso%20de%20invent%C3%A1rio%2C%20separa%C3%A7%C3%A3o%20e%20embalagem%20protegida%20de%20itens%20delicados%2Fdecorativos%20para%20despacho%20sem%20avarias%3B%0A%E2%80%A2%20*Atendimento%20%26%20Vendas%3A*%20Suporte%20humanizado%2C%20SAC%20e%20p%C3%B3s-venda%20via%20WhatsApp%20com%20comunica%C3%A7%C3%A3o%20emp%C3%A1tica%20e%20%C3%A1gil%3B%0A%E2%80%A2%20*Sistemas%20%26%20Cadastro%3A*%20Facilidade%20com%20plataformas%20de%20e-commerce%2C%20tratamento%20e%20padroniza%C3%A7%C3%A3o%20de%20fotos%20de%20produtos.%0A%0AComo%20diferencial%20em%20sistemas%20e%20organiza%C3%A7%C3%A3o%20de%20processos%2C%20desenvolvi%20o%20projeto%20*ExPlan*%20(aplica%C3%A7%C3%A3o%20web%20para%20c%C3%A1lculo%20r%C3%A1pido%20de%20or%C3%A7amentos%2C%20estrutura%C3%A7%C3%A3o%20de%20quantitativos%20e%20parametriza%C3%A7%C3%A3o%20de%20custos)%3A%0A%F0%9F%91%89%20https%3A%2F%2Fthiagonascimentobarbosapro.com%0A%0ASou%20muito%20organizado%2C%20pontual%20e%20busco%20essa%20oportunidade%20para%20somar%20na%20rotina%20di%C3%A1ria%20da%20loja%20e%20continuar%20aprimorando%20minhas%20compet%C3%AAncias.%0A%0ASegue%20meu%20curr%C3%ADculo%20em%20anexo%20para%20avalia%C3%A7%C3%A3o.%20Estou%20%C3%A0%20disposi%C3%A7%C3%A3o%20para%20uma%20entrevista!" target="_blank" class="btn btn-wa">💬 Abrir no WhatsApp</a>
+        <a href="Curriculo_Assistente_Ecommerce_Operacoes_PTBR.html" target="_blank" class="btn btn-cv">📄 Abrir Currículo (PDF)</a>
       </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">TM Sempre Tecnologia (Projetos de Produtos Digitais)</div>
-          <div class="exp-date">2024 &mdash; Atual</div>
-        </div>
-        <div class="exp-role">Product Designer & Desenvolvedor de Soluções</div>
-        <ul class="exp-desc">
-          <li><strong>Criação de Produtos & Prototipagem:</strong> Concepção, wireframing, testes de usabilidade e desenvolvimento de plataformas web e landing pages focadas em conversão, retenção e clareza visual.</li>
-          <li><strong>Design Systems Escaláveis:</strong> Criação de bibliotecas de componentes reutilizáveis (Bento layout, paletas funcionais, tipografia hierárquica e microinterações com Tailwind CSS/Next.js).</li>
-          <li><strong>Design com Inteligência Artificial:</strong> Integração de pipelines de IA generativa e agentes autônomos na experiência do usuário, tornando tarefas repetitivas 100% assistidas e intuitivas.</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Promed / Brasil Telecom / Moto Brasil</div>
-          <div class="exp-date">2019 &mdash; 2023</div>
-        </div>
-        <div class="exp-role">Experiência em Backoffice, Logística e Atendimento (Base de UX Research)</div>
-        <ul class="exp-desc">
-          <li>Vivência direta na ponta operacional (SAC, rotinas administrativas e esteira de inventário). Essa bagagem de "chão de fábrica" orienta minha tomada de decisão em design, priorizando a usabilidade real sobre hipóteses teóricas.</li>
-        </ul>
-      </div>
-
-      <div class="highlight-box">
-        <strong>Diferencial como Product Designer:</strong> Combino a capacidade de <strong>pesquisar e desenhar fluxos simples para regras de negócio pesadas</strong> com a facilidade técnica de prototipar e validar soluções rapidamente com código real e IA.
-      </div>
-
-      <div class="main-title">Competências de Design de Produto</div>
-      <div class="grid-2">
-        <div>
-          <div class="skill-cat">🎨 UX/UI & Jornadas</div>
-          <ul class="skill-cat-list">
-            <li>Mapeamento de Jornadas & Service Blueprints</li>
-            <li>Wireframing e Prototipagem (Figma / Web)</li>
-            <li>Design Responsivo Multi-Canal (Web/Mobile)</li>
-            <li>Design Systems e Guia de Estilos</li>
-            <li>Redução de Fricção e Acessibilidade</li>
-          </ul>
-        </div>
-        <div>
-          <div class="skill-cat">💳 Mercado Financeiro & Inovação</div>
-          <ul class="skill-cat-list">
-            <li>Dashboards de Gestão & Métricas de SLA</li>
-            <li>Compliance e Validação de Regras Complexas</li>
-            <li>AI-Driven Product Design (Agentes e LLMs)</li>
-            <li>Testes de Usabilidade e Validação E2E</li>
-            <li>Visão de Negócio, Conversão e ROI</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="main-title">Formação e Especializações</div>
-      <div class="exp-item">
-        <ul class="exp-desc">
-          <li><strong>AI Coders Academy:</strong> Especialização em AI-Driven Development e Construção de Produtos Assistidos por IA (1 ano).</li>
-          <li><strong>Comunidade Sobral de Tráfego:</strong> Análise de Comportamento do Usuário, Métricas de Conversão e Funis (2 anos).</li>
-          <li><strong>Fórmula Negócio Online:</strong> Estrutura de Produtos Digitais, Arquitetura de Conversão e UX de Vendas.</li>
-          <li><strong>Ensino Médio Completo</strong> | Qualificações em Informática Avançada, Design de Interfaces e Organização de Processos.</li>
-        </ul>
-      </div>
-
+      <div id="statusMsg" class="status-msg">✅ Mensagem copiada com sucesso para a área de transferência!</div>
     </div>
 
   </div>
+
+  <script>
+    function copyToClipboard() {
+      const text = document.getElementById('copyText').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const msg = document.getElementById('statusMsg');
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 3500);
+      });
+    }
+  </script>
+
 </body>
 </html>
